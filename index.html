@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="./js/main.js"></script> -->
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <a href="#"><img src="./images/logo.png" alt=""></a>
+        <nav id="main_gnb">
+            <ul class="depth1">
+                <li><a href="#">신상품</a>
+                    <ul class="info">
+                        <li><a href="#">남성 신상품</a></li>
+                        <li><a href="#">여성 신상품</a></li>
+                        <li><a href="#">키즈 신상품</a></li>
+                    </ul>
+                </li>
+                <li><a href="">신발</a>
+                    <ul class="info">
+                        <li><a href="#">남성 신발</a></li>
+                        <li><a href="#">여성 신발</a></li>
+                        <li><a href="#">키즈 신발</a></li>
+                    </ul>
+                </li>
+                <li><a href="">의류</a>
+                    <ul class="info">
+                        <li><a href="#">남성 상의</a></li>
+                        <li><a href="#">남성 하의</a></li>
+                        <li><a href="#">여성 상의</a></li>
+                        <li><a href="#">여성 하의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="input">
+            <button class="search"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="검색">
+        </div>
+    </header>
+    <section id="visual">
+        <div class="title">
+            <h1>50%</h1>
+            <h2>REVERSE SALE</h2>
+        </div>
+        <div class="btn">
+            <button>50% 할인 구매하기</button>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+        <nav class="sns">
+            <ul>
+                <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/youtube.svg" alt=""></a></li>
+                <li><a href="#"><img src="./images/twitter.svg" alt=""></a></li>
+                <li><a href="#"><img src="./images/facebook2.png" alt=""></a></li>
+            </ul>
+        </nav>
+    </section>
+    <video src="./images/video_title.mp4" autoplay muted loop id="bg"></video>
+
+    <script>
+        $(function(){
+            $(' #main_gnb .info').hide();
+
+            $('#main_gnb .depth1 > li').hover(
+                function(){
+                    $(this)
+                        .children('.info')
+                        .stop().fadeIn();
+                },
+                function(){
+                    $('#main_gnb .info').stop().fadeOut();
+                }
+            )
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+    margin: 0; padding: 0;
+}
+html, body {
+    height: 100%;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+header {
+    width: 1200px;
+    height: 70px;
+    /* background: #333; */
+    margin: 0 auto;
+}
+header > a {
+    position: relative;
+    top: 8px;
+}
+header > #main_gnb > ul > li {
+    position: relative;
+    width: 130px;
+    left: 25%;
+    top: -30px;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    /* background: #666; */
+    z-index: 99999999;
+}
+header > #main_gnb > ul > li a {
+    color: #000;
+}
+header > .input {
+    height: 30px;
+    width: 200px;
+    border: 1px solid #999;
+    float: right;
+    position: relative;
+    top: -37px;
+    overflow: hidden;
+}
+#main_gnb > ul > li > ul > li {
+    width: 130px;
+    padding-bottom: 5px;
+    background: rgb(245, 245, 245);
+    text-align: center;
+}
+#main_gnb > ul > li > ul > li:first-child {
+    margin-top: 20px;
+    padding-top: 30px;
+}
+#main_gnb > ul > li > ul > li:last-child {
+    padding-bottom: 30px;
+}
+#main_gnb > ul > li > ul > li a:hover {
+    text-decoration: underline;
+}
+input {
+    height: 20px;
+    width: 130px;
+    padding: 5px;
+    border: 0px;
+}
+.search {
+    width: 40px;
+    height: 100%;
+    border: 0px;
+    background: none;
+}
+
+#bg {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    left: 0; top: 70px;
+}
+#visual {
+    width: 500px;
+    position: absolute;
+    z-index: 99;
+    left: 160px;
+    top: 230px;
+}
+#visual > .title {
+    position: absolute;
+    animation: title 3s alternate;
+}
+
+@keyframes title {
+    0% {
+        top: 0; left: -700px;
+    }
+    100%{
+        left: 0; top: 0px;
+        /* transform: rotateY(180deg); */
+    }
+}
+
+#visual > .title > h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 150px;
+    color: #000;
+    text-align: center;
+}
+#visual > .title > h2 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.btn > button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    position: relative;
+    left: 110px;
+    top: 350px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.btn > button:hover {
+    background: #000;
+}
+#visual > .menu > ul > li {
+    float: left;
+    position: relative;
+    top: 550px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    left: -100px;
+}
+#visual > .menu > ul > li a{
+    color: #000;
+}
+#visual > .sns {
+    width: 300px;
+}
+#visual > .sns > ul > li {
+    float: left;
+    position: relative;
+    left: 1400px;
+    top: 480px;
+    padding: 20px;
+}
+
+#visual > .sns > ul > li img { transition: 0.5s;}
+#visual > .sns > ul > li img:hover {
+    transform: scale(1.3);
+}
